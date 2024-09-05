@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css" rel="stylesheet" />
+    <link rel="stylesheet" href="both.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Using Both Numerical Values and Images</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/4.png" alt="Logo" />
+            Pulsar Detection
+          </a>
+        </div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="detect.html">Detect</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <h1 class="title">
+            Detect Pulsars Using <span>Numerical Values</span> and <span>Images</span>
+          </h1>
+          <h1 class="subtitle">Know Your <a href="img.html" class="link" style="color: #ff9001;">Channels</a> and <a href="num.html" class="link" style="color: #ff9001;">Parameters</a></h1>
+          <p class="description"><br>Download Sample Data: <a href="assets/num-and-images.zip" style="color: #d2a16f;">Click Here</a></p>
+          <div class="con">
+            <h2>Upload Image</h2>
+            <form id="uploadForm" action="#" method="post" enctype="multipart/form-data">
+              <div class="upload-container" id="uploadContainer">
+                <p>Drag and drop an image here, <br>or click here to upload</p>
+                <input type="file" id="imageUpload" accept="image/*" style="display: none;" required>
+              </div>
+            </form>
+          </div>
+        </div>
+        <div class="image">
+          <div class="con">
+            <h2>Enter Values</h2>
+            <form id="numericalForm" action="#" method="post">
+              <div class="form-group">
+                <label for="meanProfile">Mean of the Integrated Profile</label>
+                <input type="number" id="meanProfile" name="meanProfile" required>
+              </div>
+              <div class="form-group">
+                <label for="stdProfile">Standard deviation of the Integrated Profile</label>
+                <input type="number" id="stdProfile" name="stdProfile" required>
+              </div>
+              <div class="form-group">
+                <label for="kurtosisProfile">Excess kurtosis of the Integrated Profile</label>
+                <input type="number" id="kurtosisProfile" name="kurtosisProfile" required>
+              </div>
+              <div class="form-group">
+                <label for="skewnessProfile">Skewness of the Integrated Profile</label>
+                <input type="number" id="skewnessProfile" name="skewnessProfile" required>
+              </div>
+              <div class="form-group">
+                <label for="meanDM">Mean of the DM-SNR Curve</label>
+                <input type="number" id="meanDM" name="meanDM" required>
+              </div>
+              <div class="form-group">
+                <label for="stdDM">Standard deviation of the DM-SNR Curve</label>
+                <input type="number" id="stdDM" name="stdDM" required>
+              </div>
+              <div class="form-group">
+                <label for="kurtosisDM">Excess kurtosis of the DM-SNR Curve</label>
+                <input type="number" id="kurtosisDM" name="kurtosisDM" required>
+              </div>
+              <div class="form-group">
+                <label for="skewnessDM">Skewness of the DM-SNR Curve</label>
+                <input type="number" id="skewnessDM" name="skewnessDM" required>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+
+      <div class="image">
+        <div class="con">
+          <button id="submitButton" class="submit-button">
+            Submit
+            <img id="loadingGif" src="assets/loading.gif" alt="Loading..." style="display: none; margin-left: 10px;" />
+          </button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section2" id="section2" style="display: none;">
+      <div class="section__container">
+        <div class="content">
+          <h1 class="title" style="margin-bottom: -10px;"><span>Prediction</span></h1>
+          <div id="output"></div>
+        </div>
+      </div>
+    </section>
+    <script src="both.js"></script>
+  </body>
+</html>

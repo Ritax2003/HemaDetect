@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/remixicon@3.2.0/fonts/remixicon.css"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="format.css" />
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+    <title>Using PHCX Format</title>
+  </head>
+  <body>
+    <nav>
+      <div class="nav__content">
+        <div class="logo">
+          <a href="index.html">
+            <img src="assets/4.png" alt="Logo" />
+            Pulsar Detection
+          </a>
+        </div>
+        <label for="check" class="checkbox">
+          <i class="ri-menu-line"></i>
+        </label>
+        <input type="checkbox" name="check" id="check" />
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="detect.html">Detect</a></li>
+          <li><a href="about.html">About Us</a></li>
+        </ul>
+      </div>
+    </nav>
+    <section class="section">
+      <div class="section__container">
+        <div class="content">
+          <h1 class="title">
+            Detect Pulsars Using <span>Pulsar Candidate Data</span>
+          </h1>
+          <h1 class="subtitle">Returned by <span>PDMP(part of the <a href="https://psrchive.sourceforge.net/" style="color: #d2a16f;"><u>PSRCHIVE</u></a> software package)</span></h1>
+          <p class="description">
+            <b>Content of .phcx file to be used as an Input: </b>
+            <li>Signal-to-Noise Ratio</li>
+            <li>Topocentric Period</li>
+            <li>Barycentric Period</li>
+            <li>Pulse Width</li>
+            <li>Dispersion Measure</li>
+            <li>Acceleration Value</li>
+            <li>Right Ascension (J2000) in Degrees</li>
+            <li>Declination (J2000) in Degrees</li>
+            <li>FFT Signal-to-Noise Ratio</li>
+            <li>Folded Profile</li>
+            <li>Candidate Sub-Integrations</li>
+            <li>Candidate Sub-Bands,</li>
+            <li>Dm_Curve[Tuple of arrays (DmValues, SnrValues)]</li>
+            <li>Accn_Curve[Tuple of arrays (AccnValues, SnrValues)]</li>
+            <li>Rank of the candidate within the beam it was found</li>
+            <li>Hits[Number of (DM, Acceleration) trial pairs]</li>
+            <li>Pdm_Plane[Tuple of arrays (PeriodCorrections, DmValues, SnrValues)]</li>
+          </p>
+          <p class="description">
+            <b style="color: #ff9001;">Cited:</b> <a href="https://astronomy.swin.edu.au/~vmorello/" class="link" style="color: 
+            #ff9001;">https://astronomy.swin.edu.au/~vmorello/</a><br>
+            Format of .phcx file: <a href="assets/phcx-files.zip" style="color: #d2a16f;">Download an Example Format</a>
+          </p>
+        </div>
+        <div class="image">
+          <div class="con">
+            <h2>Upload a .phcx File</h2>
+            <form id="uploadForm" action="#" method="post" enctype="multipart/form-data">
+                <div class="upload-container" id="uploadContainer">
+                    <p>Drag and drop a PHCX File here, <br>or click here upload</p>
+                    <input type="file" id="fileUpload" accept=".phcx*" style="display: none;" required>
+                </div>
+                <div class="form-group">
+                  <button type="submit" id="uploadButton">
+                    Submit
+                    <img id="loading" src="assets/loading.gif" alt="Loading..." style="display: none; margin-left: 10px;" />
+                  </button>
+                  <p id="errorMessage" class="error-message" style="display:none;">Please upload an image first.</p>
+                </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section2" id="section2" style="display: none;">
+      <div class="section__container">
+        <div class="content">
+          <h1 class="title" style="margin-bottom: -10px;"><span>Converted Data</span></h1>
+          <div id="output"></div><br>
+          <h1 class="title" style="margin-bottom: -10px;"><span>Prediction</span></h1>
+          <div id="output1"></div>
+        </div>
+      </div>
+    </section>
+    <script src="format.js"></script>
+  </body>
+</html>
