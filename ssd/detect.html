@@ -28,8 +28,17 @@
       document.getElementById('body').innerHTML = `
         <div id="user-button"></div>
       `;
-
-      const userButtonDiv = document.getElementById('user-button')
+      const user = Clerk.user;
+      const username = user.username || user.firstName || user.emailAddress || 'User';
+      const userButtonDiv = document.getElementById('user-button');
+      document.getElementById('user-info').innerHTML = `
+        <div id ="info">Welcome, ${username} !!</div>
+        <style>
+          #info{
+            color:white;
+          }
+          </style>
+        `
       Clerk.mountUserButton(userButtonDiv);
     } 
     else {
@@ -67,6 +76,7 @@
             <li><a href="index.html">Home</a></li>
             <li><a href="detect.html">Detect</a></li>
             <li><a href="about.html">About Us</a></li>
+            <li id ="user-info"></li>
             <button id="body"></button>
           </ul>
         </div>

@@ -29,8 +29,17 @@
       document.getElementById('body').innerHTML = `
         <div id="user-button"></div>
       `;
-
-      const userButtonDiv = document.getElementById('user-button')
+      const user = Clerk.user;
+      const username = user.username || user.firstName || user.emailAddress || 'User';
+      const userButtonDiv = document.getElementById('user-button');
+      document.getElementById('user-info').innerHTML = `
+        <div id ="info">Welcome, ${username} !!</div>
+        <style>
+          #info{
+            color:white;
+          }
+          </style>
+        `
       Clerk.mountUserButton(userButtonDiv);
     } 
     else {
@@ -65,6 +74,7 @@
           <li><a href="./index.html">Home</a></li>
           <li><a href="detect.html">Detect</a></li>
           <li><a href="about.html">About Us</a></li>
+          <li id ="user-info"></li>
           <button id="body"></button>
         </ul>
       </div>
@@ -100,7 +110,7 @@
             <a href="https://github.com/SUMIT2001GO "><i class="fab fa-github icon-large"></i></a>
           </div>
           <div class="team-member">
-            <img src="assets/Ritabrata dey.png" alt="Person 3">
+            <img src="assets/Ritabrata Dey.png" alt="Person 3">
             <h2>Ritabrata Dey</h2>
             <p><b>11500121016</b><br>CSEB</p>
             <a href="mailto:ritabratadey1296@gmail.com"><i class="fas fa-envelope icon-large"></i></a>
