@@ -5,3 +5,4 @@ pyyaml
 django
 djangorestframework
 pillow
+django-cors-headers
