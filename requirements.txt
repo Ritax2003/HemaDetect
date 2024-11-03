@@ -1,0 +1,7 @@
+onnxruntime
+numpy
+opencv-python
+pyyaml
+django
+djangorestframework
+pillow
