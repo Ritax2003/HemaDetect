@@ -2,7 +2,6 @@ from django.shortcuts import render
 import cv2
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
-from . import CNN_ONNX
 import base64
 import numpy as np
 import os
