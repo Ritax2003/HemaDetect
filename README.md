@@ -9,5 +9,6 @@ https://hemadetect.onrender.com/api/cnn-predict
 <div>
   Prediction:
   <br>
+  <br>
   <img src="Images/2.png" height="600" width="900">
 </div>
