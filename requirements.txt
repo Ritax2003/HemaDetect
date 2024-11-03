@@ -6,3 +6,4 @@ django
 djangorestframework
 pillow
 django-cors-headers
+tensorflow
