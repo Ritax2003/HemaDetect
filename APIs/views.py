@@ -12,7 +12,7 @@ from tensorflow.keras.models import load_model
 from tensorflow.keras.preprocessing.image import img_to_array
 
 # Load the model
-model = load_model(r'.\models\FinalQ_efficientnet_model.keras')
+model = load_model(r'./models/FinalQ_efficientnet_model.keras')
 
 @api_view(['POST'])
 def cnn_predict(request):
