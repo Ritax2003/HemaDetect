@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-gs%cj8m^7+*e9+xaeim6a17q=!8g8n2oux+2*lboi^o&&ec!e!
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['HemaDetect.onrender.com', 'localhost', '127.0.0.1', 'hemadetectsite.onrender.com']
+ALLOWED_HOSTS = ['HemaDetect.onrender.com', 'localhost', '127.0.0.1', 'hema-detect-website.vercel.app']
 
 #ALllow all hosts
 CORS_ALLOW_ALL_ORIGINS = True
