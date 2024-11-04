@@ -12,3 +12,9 @@ https://hemadetect.onrender.com/api/cnn-predict
   <br>
   <img src="Images/2.png" height="600" width="900">
 </div>
+<div>
+  GET request:
+  <br>
+  <br>
+  <img src="Images/3.png" height="600" width="900">
+</div>
